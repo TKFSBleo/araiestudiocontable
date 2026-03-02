@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CALCULAR IMPUESTO</title>
+        <!--boostrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+   <!--Css propio--> 
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+        <header>
+          <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container-fluid">
+              <a class="navbar-brand" href=".."><img class="logo_nav" src="../img/logo.jpg" alt="logo arai"></a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="../index.html">INICIO</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="./monotributo.html">MONOTRIBUTO</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="./pagos.html">PAGOS Y COBROS</a>
+                   </li>
+                   <li class="nav-item">
+                     <a class="nav-link" href="./contacto.html">CONTACTO</a>
+                   </li>
+                   <li class="nav-item">
+                     <a class="nav-link" href="./otro.html">OTRO</a>
+                   </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+        </header>
+<main>
+  <section class="contenido">
+
+    <h1>Simulador del Pago del Impuesto Especial de Regularización</h1>
+
+    <p>El Impuesto Especial de Regularización fue un tributo previsto en el régimen de regularización de activos (Ley N° 27.743 y su reglamentación) que se calculaba en dólares estadounidenses sobre el valor total de los bienes regularizados, tanto en Argentina como en el exterior. Aunque el plazo para adherirse finalizó en 2025, el siguiente detalle explica cómo se calculaba el impuesto cuando el régimen estaba vigente.</p>
+
+    <h2>Dinero en efectivo</h2>
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>Activo</th>
+          <th>Condición o uso</th>
+          <th>Impuesto</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Menos de USD 100.000 (Argentina o exterior)</td>
+          <td>Mantenerlo en CERA o usarlo en ciertos destinos permitidos</td>
+          <td>0%</td>
+        </tr>
+        <tr>
+          <td>Menos de USD 100.000</td>
+          <td>Transferencias por otra finalidad fuera de los usos exentos</td>
+          <td>5% sobre el total transferido</td>
+        </tr>
+        <tr>
+          <td>Más de USD 100.000</td>
+          <td>Mantenerlo en CERA o invertirlo en ciertos instrumentos</td>
+          <td>0%</td>
+        </tr>
+        <tr>
+          <td>Más de USD 100.000</td>
+          <td>Transferencias por otra finalidad</td>
+          <td>5% sobre el total transferido</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>Dinero depositado en cuentas bancarias del exterior</h2>
+    <p>El tratamiento era similar al del dinero en efectivo:</p>
+    <ul>
+      <li>Si se transfería a CERA dentro de los plazos de cada etapa, 0%.</li>
+      <li>Si no se transfería o se hacía fuera de plazo, se aplicaba la alícuota vigente sobre el excedente de USD 100.000 según la etapa (5%, 10% o 15%).</li>
+    </ul>
+
+    <h2>Títulos valores depositados en el exterior</h2>
+    <ul>
+      <li>Si se vendían o transferían antes del plazo exento, 0%.</li>
+      <li>Si no, la alícuota aplicable era la correspondiente a la etapa sobre el excedente de USD 100.000.</li>
+    </ul>
+
+    <h2>Otros bienes a regularizar</h2>
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>Etapa</th>
+          <th>Base imponible</th>
+          <th>Impuesto</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Etapa 1</td>
+          <td>Hasta USD 100.000</td>
+          <td>0%</td>
+        </tr>
+        <tr>
+          <td>Etapa 1</td>
+          <td>Superior a USD 100.000</td>
+          <td>5% sobre el excedente</td>
+        </tr>
+        <tr>
+          <td>Etapa 2</td>
+          <td>Hasta USD 100.000</td>
+          <td>0%</td>
+        </tr>
+        <tr>
+          <td>Etapa 2</td>
+          <td>Superior a USD 100.000</td>
+          <td>10% sobre el excedente</td>
+        </tr>
+        <tr>
+          <td>Etapa 3</td>
+          <td>Hasta USD 100.000</td>
+          <td>0%</td>
+        </tr>
+        <tr>
+          <td>Etapa 3</td>
+          <td>Superior a USD 100.000</td>
+          <td>15% sobre el excedente</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>Cálculo de la base imponible</h2>
+    <p>La base imponible se calculaba sobre el valor total de los bienes en dólares estadounidenses. Cuando los bienes estaban denominados en pesos, se los convertía usando un tipo de cambio oficial determinado por el régimen.</p>
+
+    <h3>Bienes en Argentina</h3>
+    <ul>
+      <li>Dinero en efectivo: se convertía a dólares según el tipo de cambio oficial.</li>
+      <li>Inmuebles: se tomaba el mayor valor entre precio de compra, valor fiscal o valor mínimo establecido, convertido a dólares.</li>
+      <li>Acciones o participaciones: se valoraban según balance o mercado, convertidos a dólares.</li>
+      <li>Títulos que coticen en Argentina: valor de mercado convertido a dólares.</li>
+      <li>Créditos a residentes: capital más intereses, convertido a dólares.</li>
+      <li>Criptoactivos: valor de mercado o precio de compra, el mayor, convertido a dólares.</li>
+    </ul>
+
+    <h3>Bienes en el exterior</h3>
+    <ul>
+      <li>Dinero en efectivo en el exterior: valor directo en dólares.</li>
+      <li>Inmuebles fuera de Argentina: mayor valor entre precio de compra o mínimo establecido.</li>
+      <li>Participaciones, títulos y otros bienes: según valor de mercado o último balance disponible.</li>
+      <li>Créditos a no residentes: capital más intereses devengados en dólares.</li>
+      <li>Bienes intangibles: valor de adquisición actualizado por inflación convertido a dólares.</li>
+      <li>Otros bienes: precio de mercado convertido a dólares.</li>
+    </ul>
+
+    <p>El pago del Impuesto Especial de Regularización, cuando el régimen estaba vigente, se realizaba en dólares mediante transferencia electrónica generando el Volante Electrónico de Pago (VEP) F.3323.</p>
+
+    <p>El incumplimiento en los plazos aplicables para la etapa correspondiente podía dejar sin efecto la manifestación de adhesión y excluir a quien regularizaba de los beneficios previstos para esa etapa.</p>
+
+  </section>
+</main>
+<footer class="footer">
+  <div class="container footer-contenido">
+    
+    <div class="footer-col">
+      <figure class="logo_nav"> <img src="../img/logo.jpg" alt=""></figure>
+      <p>Asesoramiento impositivo y contable.</p>
+    </div>
+
+    <div class="footer-col">
+      <h6>Secciones</h6>
+      <ul>
+        <li><a href="../index.html">Inicio</a></li>
+        <li><a href="./monotributo.html">Monotributo</a></li>
+        <li><a href="./pagos.html">Pagos y Cobros</a></li>
+        <li><a href="./contacto.html">Contacto</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h6>Contacto</h6>
+      <p>Email: araiestudiocontable@email.com</p>
+      <p>Tel: +54 11 68820017</p>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2026 Todos los derechos reservados</p>
+  </div>
+</footer>
+ <section>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</section>
+
+</body>
+</html>

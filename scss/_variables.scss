@@ -1,0 +1,15 @@
+$img__responsive--size: 175px;
+$center: center;
+$details--color: #a31111;
+$color-hover: #5e0101;
+$color-acento: #C1121F;
+
+@mixin font--size ($font--size){ font-size: $font--size;}
+@mixin nav-hover {
+    content: "";
+    position: absolute;
+    height: 33.33%;
+    width: 0;
+    background-color: $color-hover;
+    transition: all 0.5s;
+  }
