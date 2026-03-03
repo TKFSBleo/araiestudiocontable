@@ -202,15 +202,92 @@ img {
   
 .txt-size h3{font-size: 1.8rem;}
 
-
 .mono--grid {
   display: grid;
-  grid-template-columns: 2fr, 1fr;
-  grid-template-rows: auto;
+  grid-template-columns: 2fr 1fr; /* Desktop: 2 columnas */
+  gap: 20px;
   grid-template-areas: 
-  "concept-list    obra-list"
-  "baja-list       categorias-list"
-  "alta-list       pagar-mono-list";
+    "concept-list obra-list"
+    "baja-list categorias-list"
+    "alta-list pagar-mono-list";
 }
 
-.pasos li { list-style: none;}
+.concept-list { grid-area: concept-list; }
+.obra-list { grid-area: obra-list; }
+.baja-list { grid-area: baja-list; }
+.categorias-list { grid-area: categorias-list; }
+.alta-list { grid-area: alta-list; }
+.pagar-mono-list { grid-area: pagar-mono-list; }
+
+.pasos li { list-style: none; }
+
+@media screen and (max-width: 768px) {
+  .mono--grid { 
+    grid-template-columns: 1fr; /* Una sola columna */
+    grid-template-areas: 
+      "concept-list"
+      "obra-list"
+      "baja-list"
+      "categorias-list"
+      "alta-list"
+      "pagar-mono-list";
+  }
+
+  .index--grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .index--grid .txt_prin {
+    text-align: center; /* centrar texto en móviles */
+  }
+
+  .index--grid .index_img {
+    justify-self: center; /* centrar imagen */
+    max-width: 100%;
+    height: auto;
+  }
+
+  .index--grid img {
+    width: 90%; /* ajustar tamaño de imagen */
+    max-width: 300px; /* limitar ancho máximo */
+  }
+
+  
+  .pago-list {
+    flex-direction: column; /* columna única */
+    gap: 1.5rem;
+    align-items: center; /* centrar items */
+  }
+
+  .pago-list .item {
+    width: 90%; /* ocupar casi todo el ancho */
+    max-width: 400px; /* limitar tamaño */
+  }
+}
+
+.icon {
+  width: 65px;       /* tamaño base en desktop */
+  aspect-ratio: 1/1; /* siempre cuadrado */
+  background-color: #C1121F;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon i {
+  font-size: 2rem;
+  color: white;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .icon {
+    width: 60px; /* se achica en móvil */
+  }
+
+  .icon i {
+    font-size: 1.6rem;
+  }
+}
