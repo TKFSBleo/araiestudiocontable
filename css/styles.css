@@ -198,7 +198,7 @@ img {
 
 .mono--grid {
   display: grid;
-  grid-template-columns: 2fr, 1fr; /* Desktop: 2 columnas */
+  grid-template-columns: (2fr 1fr); /* Desktop: 2 columnas */
   gap: 10px;
   grid-template-areas: "concept-list obra-list" "baja-list categorias-list" "alta-list pagar-mono-list";
 }
