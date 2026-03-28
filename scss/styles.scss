@@ -96,6 +96,34 @@ img {
   border-radius: 6px;
 }
 
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 15%;
+
+  width: 98px;
+  height: 98px;
+
+  background-color: #0f9255;
+  color: white;
+
+  border-radius: 30%;
+  z-index: 1000;
+  text-decoration: none;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.whatsapp-float i {
+  font-size: 64px;
+  line-height: 1;
+}
+
+
 /* ===== FOOTER ===== */
 
 .footer {
