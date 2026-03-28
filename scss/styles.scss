@@ -52,6 +52,10 @@ h3 {
   background-color: #111111;
   border-bottom: 2px solid #C1121F;
 }
+.navbar-brand {
+  display: flex;
+  align-items: center;
+}
 
 .navbar-nav{ display: flex;
 align-items: center;}
